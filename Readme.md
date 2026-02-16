@@ -81,7 +81,7 @@ $$
 
 $$
 \text{ColorScore}_B=
-\frac{(g + 0.5*y),(g + y) + 0.01*r}{N^2}
+\frac{(g + 0.5 \cdot y) \cdot (g + y) + 0.01 \cdot r}{N^2}
 $$
 
 **Properties**
@@ -96,7 +96,7 @@ $$
 
 $$
 \text{ColorScore}_B=
-\frac{g + 0.5*y + 0.01*r}{N}
+\frac{g + 0.5 \cdot y + 0.01 \cdot r}{N}
 $$
 
 **Properties**
@@ -121,9 +121,9 @@ Base configuration:
 
 | Mode            | Weights (Mand, Pref, Tasks) | Interpretation |
 | --------------- | --------------------------- | -------------- |
-| **Strict filter** | $$(1.0,;0.1,;0.1)$$        | Base requirements dominate; additional ones do not compensate for gaps |
-| **Flexible profile** | $$(0.6,;0.2,;0.2)$$     | Broad profile can outweigh base shortfall |
-| **Balance**      | $$(0.7,;0.15,;0.15)$$    | Compromise: base matters, but boosters matter too |
+| **Strict filter** | $$(1.0;0.1;0.1)$$        | Base requirements dominate; additional ones do not compensate for gaps |
+| **Flexible profile** | $$(0.6;0.2;0.2)$$     | Broad profile can outweigh base shortfall |
+| **Balance**      | $$(0.7;0.15;0.15)$$    | Compromise: base matters, but boosters matter too |
 
 > Weights are **decision policy**, not a property of the data.
 
@@ -135,11 +135,11 @@ Main score (used for primary sorting):
 
 $$
 \text{FinalColorScore}=
-w_m,\text{ColorScore}*{Mand}
+w_m \cdot \text{ColorScore}_{Mand}
 +
-w_p,\text{ColorScore}*{Pref}
+w_p \cdot \text{ColorScore}_{Pref}
 +
-w_t,\text{ColorScore}_{Tasks}
+w_t \cdot \text{ColorScore}_{Tasks}
 $$
 
 **Interpretation**
@@ -174,18 +174,18 @@ Refined block score:
 
 $$
 \text{PercentScore}_B=
-\bigl(G_n + 0.5*Y_n + 0.01*R_n\bigr)\cdot \text{ColorScore}_B
+\bigl(G_n + 0.5 \cdot Y_n + 0.01 \cdot R_n\bigr)\cdot \text{ColorScore}_B
 $$
 
 Final:
 
 $$
 \text{FinalPercentScore}=
-w_m,\text{PercentScore}*{Mand}
+w_m \cdot \text{PercentScore}_{Mand}
 +
-w_p,\text{PercentScore}*{Pref}
+w_p \cdot \text{PercentScore}_{Pref}
 +
-w_t,\text{PercentScore}_{Tasks}
+w_t \cdot \text{PercentScore}_{Tasks}
 $$
 
 Sorting is by $$\text{FinalPercentScore}$$.
@@ -454,7 +454,7 @@ $$
 
 $$
 \text{ColorScore}_B=
-\frac{(g + 0.5*y)*(g + y) + 0.01*r}{N^2}
+\frac{(g + 0.5 \cdot y) \cdot (g + y) + 0.01 \cdot r}{N^2}
 $$
 
 **Свойства**
@@ -469,7 +469,7 @@ $$
 
 $$
 \text{ColorScore}_B=
-\frac{g + 0.5*y + 0.01*r}{N}
+\frac{g + 0.5 \cdot y + 0.01 \cdot r}{N}
 $$
 
 **Свойства**
@@ -494,9 +494,9 @@ $$
 
 | Режим              | Веса (Mand, Pref, Tasks) | Интерпретация                                                         |
 | ------------------ | ------------------------ | --------------------------------------------------------------------- |
-| **Жёсткий фильтр** | $$(1.0,;0.1,;0.1)$$      | Базовые требования доминируют; дополнительные не компенсируют пробелы |
-| **Гибкий профиль** | $$(0.6,;0.2,;0.2)$$      | Широкий профиль может перекрыть недостачу по базе                     |
-| **Баланс**         | $$(0.7,;0.15,;0.15)$$    | Компромисс: база важна, но усилители значимы                          |
+| **Жёсткий фильтр** | $$(1.0;0.1;0.1)$$      | Базовые требования доминируют; дополнительные не компенсируют пробелы |
+| **Гибкий профиль** | $$(0.6;0.2;0.2)$$      | Широкий профиль может перекрыть недостачу по базе                     |
+| **Баланс**         | $$(0.7;0.15;0.15)$$    | Компромисс: база важна, но усилители значимы                          |
 
 > Веса — это **политика принятия решений**, а не свойство данных.
 
@@ -547,18 +547,18 @@ $$
 
 $$
 \text{PercentScore}_B=
-\bigl(G_n + 0.5*Y_n + 0.01*R_n\bigr)\cdot \text{ColorScore}_B
+\bigl(G_n + 0.5 \cdot Y_n + 0.01 \cdot R_n\bigr)\cdot \text{ColorScore}_B
 $$
 
 Итог:
 
 $$
 \text{FinalPercentScore}=
-w_m,\text{PercentScore}*{Mand}
+w_m \cdot \text{PercentScore}_{Mand}
 +
-w_p,\text{PercentScore}*{Pref}
+w_p \cdot \text{PercentScore}_{Pref}
 +
-w_t,\text{PercentScore}_{Tasks}
+w_t \cdot \text{PercentScore}_{Tasks}
 $$
 
 Сортировка выполняется по $$\text{FinalPercentScore}$$.
