@@ -81,7 +81,7 @@ $$
 
 $$
 \text{ColorScore}_B=
-\frac{(g + 0.5,y),(g + y) + 0.01,r}{N^2}
+\frac{(g + 0.5*y),(g + y) + 0.01*r}{N^2}
 $$
 
 **Properties**
@@ -96,7 +96,7 @@ $$
 
 $$
 \text{ColorScore}_B=
-\frac{g + 0.5,y + 0.01,r}{N}
+\frac{g + 0.5*y + 0.01*r}{N}
 $$
 
 **Properties**
@@ -174,7 +174,7 @@ Refined block score:
 
 $$
 \text{PercentScore}_B=
-\bigl(G_n + 0.5,Y_n + 0.01,R_n\bigr)\cdot \text{ColorScore}_B
+\bigl(G_n + 0.5*Y_n + 0.01*R_n\bigr)\cdot \text{ColorScore}_B
 $$
 
 Final:
@@ -454,7 +454,7 @@ $$
 
 $$
 \text{ColorScore}_B=
-\frac{(g + 0.5,y),(g + y) + 0.01,r}{N^2}
+\frac{(g + 0.5*y)*(g + y) + 0.01*r}{N^2}
 $$
 
 **Свойства**
@@ -469,7 +469,7 @@ $$
 
 $$
 \text{ColorScore}_B=
-\frac{g + 0.5,y + 0.01,r}{N}
+\frac{g + 0.5*y + 0.01*r}{N}
 $$
 
 **Свойства**
@@ -547,7 +547,7 @@ $$
 
 $$
 \text{PercentScore}_B=
-\bigl(G_n + 0.5,Y_n + 0.01,R_n\bigr)\cdot \text{ColorScore}_B
+\bigl(G_n + 0.5*Y_n + 0.01*R_n\bigr)\cdot \text{ColorScore}_B
 $$
 
 Итог:
